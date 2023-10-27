@@ -10,5 +10,5 @@ def asalCarpanBulma(sayi):
     return asalCarpanlar
 
 sayi = int(input("Lütfen bir sayi giriniz: "))
-#print("f{sayi} sayısının asal çarpanları: {asalCarpanBulma}")
+
 print(asalCarpanBulma(sayi))
