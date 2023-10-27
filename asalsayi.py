@@ -1,11 +1,11 @@
-sayi=int(input("Sayiyi giriniz: "))
-if sayi > 1:
+number = int(input("Lütfen bir sayı giriniz."))
 
-   for i in range(2,sayi):
-      if (sayi % i) == 0:
-         print(sayi,"Asal sayi değildir.")
-         break
-   else:
-         print(sayi,"Asal sayidir.")
+if(number > 1):
+    for i in range(2,number):
+        if(number % i == 0):
+            print("Girilen sayı asal değil.")
+            break
+    else:
+        print("Girilen sayı asaldır. ")
 else:
-   print(sayi,"Asal sayi değildir.")         
+    print("Girilen sayı asal değildir. ")

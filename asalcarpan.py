@@ -1,14 +1,16 @@
-def asalCarpanBulma(sayi):
-    asalCarpanlar =[]
-    carpan =2
-    while carpan <= sayi:
-        if sayi % carpan == 0:
-            asalCarpanlar.append(carpan)
-            sayi //=carpan
+def findPrimeNumber(number):
+    if(number > 1):
+        for i in range(2,number):
+            if(number % i == 0):
+                break
         else:
-            carpan +=1
-    return asalCarpanlar
+            return number
+        
+num = int(input("sayı giriniz: "))
+asalCarpan = []
 
-sayi = int(input("Lütfen bir sayi giriniz: "))
-
-print(asalCarpanBulma(sayi))
+for i in range(2,num+1):
+    if(num % i == 0):
+        if(findPrimeNumber(i) != None):
+            asalCarpan.append(i)
+print(f"Girilen sayının asal çarpanları: {asalCarpan}")

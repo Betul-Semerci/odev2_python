@@ -1,14 +1,22 @@
-sayi1 = int(input("Birinci sayıyı giriniz: "))
-sayi2 = int(input("İkinci sayıyı giriniz: "))
+number1 = int(input("Lütfen bir sayı giriniz."))
+number2 = int(input("Lütfen bir sayı giriniz."))
+minNumber = 0
+ebob = 1
+def findEbob():
+    if(number1 < number2):
+        minNumber = number1
+    else:
+        minNumber = number2
 
-if (sayi1>sayi2):
-    kucuksayi=sayi2
-else:
-    kucuksayi=sayi1
-for i in range(1,kucuksayi+1):
-    if(sayi1 % i==0) and (sayi2%i ==0):
-        ebob = i
-        ekok = (sayi1*sayi2)//ebob
+    for i in range(1,minNumber+1):
+        if((number1 % i == 0) and (number2 % i == 0)):
+            ebob = i
+    return ebob
 
-print ("EBOB: ",ebob)
-print ("EKOK: ",ekok)       
+def findEkok():
+    return number1 * number2 / findEbob()
+
+
+print("girilen sayının ebobu",findEbob())
+
+print("girilen sayının ekoku",findEkok())

@@ -1,11 +1,12 @@
-a=1
-b=1
+firstNumber = 1
+secondNumber = 1
+fibonacci = [firstNumber, secondNumber]
+index = 18
 
-fibonacci = [a,b]
-
-for x in range(18):
-     a,b =b,a + b
-     fibonacci.append(b)
-print (fibonacci)
-
-
+while index > 0:
+    newNumber = firstNumber + secondNumber
+    firstNumber = secondNumber
+    secondNumber = newNumber
+    fibonacci.append(newNumber)
+    index -=1
+print(f"fibonacci dizisi: {fibonacci}")
